@@ -49,8 +49,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
     <iron-icon icon="bookmark"></iron-icon>
     <h1>Notes</h1>
-    <iron-icon icon="cloud" hidden$="[[!online]]"></iron-icon>
-    <iron-icon icon="cloud-off" hidden$="[[online]]"></iron-icon>
+    <template is="dom-if" if="[[!online]]">
+        <iron-icon icon="cloud" hidden$="[[!online]]"></iron-icon>
+    </template>
+    <template is="dom-if" if="[[online]]">
+        <iron-icon icon="cloud-off" hidden$="[[online]]"></iron-icon>
+    </template>
     <paper-icon-button
         icon="[[computeLockIcon(signedIn)]]"
         disabled="[[!signedIn]]"

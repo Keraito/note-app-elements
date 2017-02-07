@@ -49,10 +49,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
     <iron-icon icon="bookmark"></iron-icon>
     <h1>Notes</h1>
-    <template is="dom-if" if="[[!online]]">
+    <template is="dom-if" if="[[online]]">
         <iron-icon icon="cloud" hidden$="[[!online]]"></iron-icon>
     </template>
-    <template is="dom-if" if="[[online]]">
+    <template is="dom-if" if="[[!online]]">
         <iron-icon icon="cloud-off" hidden$="[[online]]"></iron-icon>
     </template>
     <paper-icon-button
